@@ -26,7 +26,7 @@
 
 - (BOOL)slk_canScroll
 {
-    if (self.contentSize.height > CGRectGetHeight(self.frame)) {
+    if (self.contentSize.height > (CGRectGetHeight(self.frame) + self.contentOffset.y)) {
         return YES;
     }
     return NO;
